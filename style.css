@@ -1,0 +1,211 @@
+.button-mul {
+  background-color: #ffb300;
+  color: #fff;
+}
+
+.button-percent {
+  background-color: #ffd600;
+  color: #333;
+}
+
+.button-negate {
+  background-color: #00bcd4;
+  color: #fff;
+}
+
+.button-inv {
+  background-color: #8bc34a;
+  color: #fff;
+}
+
+.button-dot {
+  background-color: #b388ff;
+  color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(120deg, #ff0080, #7928ca, #00ffea, #ffeb3b, #00ffea, #7928ca, #ff0080);
+  background-size: 400% 400%;
+  animation: extreme-bg 12s ease-in-out infinite;
+}
+
+@keyframes extreme-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 50% 100%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 50% 0%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.calculator {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.calculator::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: calc(100% + 16px);
+  z-index: -1;
+  border-radius: 20px;
+  background: linear-gradient(270deg, #ff0080, #7928ca, #00ffea, #ffeb3b, #00ffea, #7928ca, #ff0080);
+  background-size: 400% 400%;
+  animation: rgb-border 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rgb-border {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.bar {
+  background-color: rgb(227, 232, 233);
+  width: 345px;
+  height: 54px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 28px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  width: 320px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.buttons button,
+.buttons [class^="button-"] {
+  padding: 20px 0px;
+  font-size: 21px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.button-7 {
+  background-color: #f28b82;
+  color: white;
+}
+
+.button-8 {
+  background-color: #fbbc04;
+  color: white;
+}
+
+.button-9 {
+  background-color: #fff475;
+  color: black;
+}
+
+.button-\/ {
+  background-color: #ccff90;
+  color: black;
+}
+
+.button-4 {
+  background-color: #a7ffeb;
+  color: black;
+}
+
+.button-5 {
+  background-color: #cbf0f8;
+  color: black;
+}
+
+.button-6 {
+  background-color: #aecbfa;
+  color: black;
+}
+
+.button-\= {
+  background-color: #d7aefb;
+  color: black;
+}
+
+.button-1 {
+  background-color: #fdcfe8;
+  color: black;
+}
+
+.button-2 {
+  background-color: #e6c9a8;
+  color: black;
+}
+
+.button-3 {
+  background-color: #e8eaed;
+  color: black;
+}
+
+.button-\- {
+  background-color: #f1f3f4;
+  color: black;
+}
+
+.button-\+ {
+  background-color: #ccffdd;
+  color: black;
+}
+
+.button-0 {
+  background-color: #fdd7b0;
+  color: black;
+}
+
+.button-C {
+  background-color: #f28b82;
+  color: white;
+}
